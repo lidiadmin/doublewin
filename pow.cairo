@@ -16,6 +16,10 @@ func recursive_calc_pow{range_check_ptr}(x, p) -> (y):
         return (x)
     end
 
+    if p == 2:
+        return (x)
+    end
+
     let (div, rem) = unsigned_div_rem(p, 2)
 
     let (local res) = recursive_calc_pow(x * x, div)
